@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using HospitalAPI.Applications.Departments.Dtos;
+using HospitalAPI.Applications.DiseaseKinds;
+using HospitalAPI.Applications.DiseaseKnowledge;
 using HospitalAPI.Applications.Doctors.Dtos;
 using HospitalAPI.Applications.HealthNews;
 using HospitalAPI.Applications.Hospitals.Dtos;
@@ -58,6 +60,20 @@ namespace HospitalAPI.Configs
             CreateMap<HealthNews, HealthNewDto>();
             CreateMap<HealthNewListDto, HealthNews>();
             CreateMap<HealthNews, HealthNewListDto>();
+
+            CreateMap<CreateOrEditDiseaseKnowledgeDto, DiseaseKnowledge>();
+            CreateMap<DiseaseKnowledge, CreateOrEditDiseaseKnowledgeDto>();
+            CreateMap<DiseaseKnowledgeDto, DiseaseKnowledge>();
+            CreateMap<DiseaseKnowledge, DiseaseKnowledgeDto>();
+            CreateMap<DiseaseKnowledgeListDto, DiseaseKnowledge>();
+            CreateMap<DiseaseKnowledge, DiseaseKnowledgeListDto>();
+
+            CreateMap<CreateOrEditDiseaseKindsDto, DiseaseKinds>();
+            CreateMap<DiseaseKinds, CreateOrEditDiseaseKindsDto>();
+            CreateMap<DiseaseKindsDto, DiseaseKinds>();
+            CreateMap<DiseaseKinds, DiseaseKindsDto>();
+            CreateMap<DiseaseKindsListDto, DiseaseKinds>();
+            CreateMap<DiseaseKinds, DiseaseKindsListDto>();
         }
     }
 }
