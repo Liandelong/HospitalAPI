@@ -84,7 +84,7 @@ namespace HospitalAPI.Controllers
                              Id = problems.Id,
                              Title = problems.Title,
                              Info = answer == null ? "" : answer.Content,
-                             Another = user ==null?"":user.UserName,
+                             Another = user ==null?"匿名":user.UserName,
                              UserId = user == null ? 0 : user.Id,
                              Img = "../../static/hen/问.jpg"
                          };
@@ -120,14 +120,14 @@ namespace HospitalAPI.Controllers
                          on problems.Id equals answers.ProblemId into JoinedEmpAnswer
                          from answer in JoinedEmpAnswer.DefaultIfEmpty()
                          join users in _doContext.Users.ToList()
-                          on problems.UserId equals users.Id into JoinedEmpUser
+                          on answer.UserId equals users.Id into JoinedEmpUser
                          from user in JoinedEmpUser.DefaultIfEmpty()
                          select new ProblemListDto
                          {
                              Id = problems.Id,
                              Title = problems.Title,
                              Info = answer == null ? "" : answer.Content,
-                             Another ="医生", //user == null ? "" : user.UserName,
+                             Another =user == null ? "匿名" : user.UserName,
                              UserId = user == null ? 0 : user.Id,
                              Img = "../../static/hen/问.jpg'"
                          };
