@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using HospitalAPI.Applications.Answers;
 using HospitalAPI.Applications.Departments.Dtos;
 using HospitalAPI.Applications.DiseaseKinds;
 using HospitalAPI.Applications.DiseaseKnowledge;
@@ -6,6 +7,7 @@ using HospitalAPI.Applications.Doctors.Dtos;
 using HospitalAPI.Applications.HealthNews;
 using HospitalAPI.Applications.Hospitals.Dtos;
 using HospitalAPI.Applications.NewsKinds.Dtos;
+using HospitalAPI.Applications.Problems;
 using HospitalAPI.Applications.User.Dtos;
 using HospitalAPI.Models;
 using HospitalAPI.ViewModels;
@@ -74,6 +76,18 @@ namespace HospitalAPI.Configs
             CreateMap<DiseaseKinds, DiseaseKindsDto>();
             CreateMap<DiseaseKindsListDto, DiseaseKinds>();
             CreateMap<DiseaseKinds, DiseaseKindsListDto>();
+
+            CreateMap<CreateOrEditProblemDto, Problems>();
+            CreateMap<Problems, CreateOrEditProblemDto>();
+            CreateMap<ProblemDto, Problems>();
+            CreateMap<Problems, ProblemDto>();
+            CreateMap<ProblemListDto, Problems>();
+            CreateMap<Problems, ProblemListDto>();
+
+            CreateMap<CreateOrEditAnswerDto, Answers>();
+            CreateMap<Answers, CreateOrEditAnswerDto>();
+            CreateMap<AnswerDto, Answers>();
+            CreateMap<Answers, AnswerDto>();
         }
     }
 }

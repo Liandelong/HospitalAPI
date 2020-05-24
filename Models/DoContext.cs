@@ -20,5 +20,7 @@ namespace HospitalAPI.Models
         public DbSet<NewsKinds> NewsKinds { get; set; }
         public DbSet<DiseaseKnowledge> DiseaseKnowledges { get; set; }
         public DbSet<DiseaseKinds> DiseaseKinds { get; set; }
+        public DbSet<Problems> Problems { get; set; }
+        public DbSet<Answers> Answers { get; set; }
     }
 }
